@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import macrebot.practice.mongodb.models.User;
 
-public interface UserRepository extends MongoRepository<User, Integer> {
+public interface UserRepository extends MongoRepository<User, Long> {
 
     List<User> findByName(String name);
 
-    Boolean deleteUserById(int id);
+    Boolean deleteUserById(Long id);
 
 }

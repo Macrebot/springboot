@@ -23,7 +23,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserById(int id) {
+    public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
@@ -31,7 +31,7 @@ public class UserService {
         return userRepository.findByName(name);
     }
 
-    public Boolean deleteUserById(int id) {
+    public Boolean deleteUserById(Long id) {
         Optional<User> optionalUser = userRepository.findById(id);
 
         if (optionalUser.isPresent()) {

@@ -9,23 +9,23 @@ public class User {
     // Atributes
 
     @Id
-    private Integer id;
+    private Long id;
     private String name;
     private String email;
 
     // Constructor
-    public User(int id, String name, String email) {
+    public User(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
     // Getters & Setters
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

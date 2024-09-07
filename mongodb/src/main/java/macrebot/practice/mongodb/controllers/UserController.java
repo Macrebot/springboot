@@ -1,7 +1,6 @@
 package macrebot.practice.mongodb.controllers;
 
 import java.net.URI;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUserById(@PathVariable int id) {
+    public ResponseEntity<?> getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
 
         if (user != null) {
@@ -54,7 +53,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteUserById(@PathVariable int id) {
+    public ResponseEntity<?> deleteUserById(@PathVariable Long id) {
         boolean deleted = userService.deleteUserById(id);
 
         if (deleted) {
